@@ -1,0 +1,40 @@
+import java.lang.Math;
+
+public class Point {
+    private int x, y;
+
+    public Point() {
+        this.x = 0;
+        this.y = 0;
+    }
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public Point(Point other) {
+        this.x = other.x;
+        this.y = other.y;
+    }
+
+    public double findDistance() {
+        return Math.sqrt(x*x + y*y);
+    }
+
+    public double findDistance(int x1, int y1) {
+        int dx = x - x1;
+        int dy = y - y1;
+        return Math.sqrt(dx*dx + dy*dy);
+    }
+
+    public double findDistance(Point other) {
+        int dx = x - other.x;
+        int dy = y - other.y;
+        return Math.sqrt(dx*dx + dy*dy);
+    }
+
+    public void show() {
+        System.out.println("(" + x + ", " + y + ")");
+    }
+}
